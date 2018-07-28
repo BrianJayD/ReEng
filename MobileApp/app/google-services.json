@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "952747807784",
+    "firebase_url": "https://reeng-b701c.firebaseio.com",
+    "project_id": "reeng-b701c",
+    "storage_bucket": "reeng-b701c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952747807784:android:72fa10c361302816",
+        "android_client_info": {
+          "package_name": "ca.uoit.csci4100u.reeng"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952747807784-tkovc8lh1hej5umgpit4sn3sbvsugv9h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ca.uoit.csci4100u.reeng",
+            "certificate_hash": "0c9fe545adc94e004eabbee30937a7830801a191"
+          }
+        },
+        {
+          "client_id": "952747807784-nn3t48bqt854lc4ngggei5cvg8u05pq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlVY375gsCM5TseZ_174OQ1bRPFrPdpTk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952747807784-nn3t48bqt854lc4ngggei5cvg8u05pq4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
