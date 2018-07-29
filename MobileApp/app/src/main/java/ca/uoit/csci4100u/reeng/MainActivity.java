@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity
         
     }
     public void signIn(View view){
-        Intent intent = new Intent(MainActivity.this, FrontPageActivity.class);
+        Intent intent = new Intent(MainActivity.this, AccountActivity.class);
         startActivity(intent);
         finish();
     }

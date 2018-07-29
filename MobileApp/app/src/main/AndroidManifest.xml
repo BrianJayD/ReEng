@@ -18,8 +18,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".FrontPageActivity"></activity>
-        <activity android:name=".AccountActivity"></activity>
-        <activity android:name=".IdPage"></activity>
+        <activity android:name=".AccountActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".IdPage"
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

@@ -14,13 +14,8 @@ import android.view.View;
 public class AccountActivity extends AppCompatActivity {
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
-        setContentView(R.layout.user_account_page);
-    }
-
-    public void maxId(View view) {
-        Intent intent = new Intent(AccountActivity.this, IdPage.class);
-        startActivity(intent);
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.max_id);
     }
 }
