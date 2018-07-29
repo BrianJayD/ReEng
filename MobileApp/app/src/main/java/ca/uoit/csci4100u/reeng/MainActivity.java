@@ -1,8 +1,12 @@
 package ca.uoit.csci4100u.reeng;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,7 +18,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        MainFragment.OnFragmentInteractionListener,
+        EventFragment.OnFragmentInteractionListener {
+
+    protected static FragmentManager fm;
+    protected static NavigationView mNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +47,28 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        mNavigationView = (NavigationView) findViewById(R.id.nav_view);
+        mNavigationView.setNavigationItemSelectedListener(this);
+		fm = getSupportFragmentManager();
+
+        changeFragment(new MainFragment());
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        MainFragment mainFragment = (MainFragment) fragmentManager.findFragmentByTag(MainFragment.TAG);
+
+
+        if(mainFragment == null) {
+            mainFragment = new MainFragment();
+            FragmentTransaction ft = fragmentManager.beginTransaction();
+            ft.add(R.id.fragment_layout, mainFragment, EventFragment.TAG).commit();
+        }
+    }
+	
+    public static void changeFragment(Fragment fragment){
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_layout, fragment, fragment.getTag());
+        fragmentTransaction.addToBackStack(fragment.getTag());
+        fragmentTransaction.commit();
     }
 
     @Override
@@ -80,22 +109,21 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_event) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_goals) {
 
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_sales) {
 
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }
