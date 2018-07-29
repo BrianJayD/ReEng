@@ -1,5 +1,6 @@
 package ca.uoit.csci4100u.reeng;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
@@ -43,4 +44,10 @@ public class FrontPageActivity extends AppCompatActivity {
         toggle.syncState();*/
 
     }
+
+    public void accountInfo(View view) {
+        Intent intent = new Intent(FrontPageActivity.this, AccountActivity.class);
+        startActivity(intent);
+    }
+
 }

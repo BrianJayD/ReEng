@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();*/
 
-        mNavigationView = (NavigationView) findViewById(R.id.nav_view);
-        mNavigationView.setNavigationItemSelectedListener(this);
+        /*mNavigationView = (NavigationView) findViewById(R.id.nav_view);
+        mNavigationView.setNavigationItemSelectedListener(this);*/
 		fm = getSupportFragmentManager();
 
         changeFragment(new MainFragment());
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onFragmentInteraction(Uri uri) {
-
+        
     }
     public void signIn(View view){
         Intent intent = new Intent(MainActivity.this, FrontPageActivity.class);
