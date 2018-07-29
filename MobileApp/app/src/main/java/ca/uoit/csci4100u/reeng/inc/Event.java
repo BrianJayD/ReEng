@@ -11,7 +11,6 @@ public class Event {
     public Event(String eventName,String eventLocation){
         this.eventName=eventName;
         this.eventLocation=eventLocation;
-
     }
 
     public String getEventName() {
