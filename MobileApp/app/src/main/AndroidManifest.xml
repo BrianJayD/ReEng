@@ -18,6 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".FrontPageActivity"></activity>
+        <activity android:name=".AccountActivity"></activity>
+        <activity android:name=".IdPage"></activity>
     </application>
 
 </manifest>

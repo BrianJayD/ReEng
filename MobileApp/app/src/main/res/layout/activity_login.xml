@@ -16,11 +16,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="2.5"
-<<<<<<< HEAD
         android:src="@drawable/common_google_signin_btn_icon_dark"
-=======
-        android:src="@drawable/ic_launcher_background"
->>>>>>> 623a149bf00b2668ed501ab3ed08871eb6b2b173
         android:tint="@color/marketplaze_specs"
         android:contentDescription="@string/app_name" />
 
@@ -55,11 +51,8 @@
                     android:id="@+id/username_or_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-<<<<<<< HEAD
-                    android:drawableLeft="@drawable/common_google_signin_btn_icon_dark_focused"
-=======
->>>>>>> 623a149bf00b2668ed501ab3ed08871eb6b2b173
-                    android:drawableTint="@color/black"
+                android:drawableLeft="@drawable/common_google_signin_btn_icon_dark_focused"
+                android:drawableTint="@color/black"
                     android:hint="."
                     android:inputType="text|textEmailAddress"
                     android:maxLines="1"
@@ -77,10 +70,7 @@
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-<<<<<<< HEAD
                     android:drawableLeft="@drawable/common_google_signin_btn_icon_dark_normal"
-=======
->>>>>>> 623a149bf00b2668ed501ab3ed08871eb6b2b173
                     android:drawableTint="@color/black"
                     android:hint="."
                     android:imeActionId="@+id/login"
