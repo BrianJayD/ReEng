@@ -1,10 +1,7 @@
 package ca.uoit.csci4100u.reeng;
 
-<<<<<<< HEAD
 import android.net.Uri;
-=======
 import android.content.Intent;
->>>>>>> 623a149bf00b2668ed501ab3ed08871eb6b2b173
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -50,7 +47,6 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();*/
 
-<<<<<<< HEAD
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
         mNavigationView.setNavigationItemSelectedListener(this);
 		fm = getSupportFragmentManager();
@@ -73,10 +69,8 @@ public class MainActivity extends AppCompatActivity
         fragmentTransaction.replace(R.id.fragment_layout, fragment, fragment.getTag());
         fragmentTransaction.addToBackStack(fragment.getTag());
         fragmentTransaction.commit();
-=======
         /*NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);*/
->>>>>>> 623a149bf00b2668ed501ab3ed08871eb6b2b173
     }
 
     @Override
@@ -130,15 +124,13 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-<<<<<<< HEAD
     @Override
     public void onFragmentInteraction(Uri uri) {
 
-=======
-    public void signIn(View view) {
+    }
+    public void signIn(View view){
         Intent intent = new Intent(MainActivity.this, FrontPageActivity.class);
         startActivity(intent);
         finish();
->>>>>>> 623a149bf00b2668ed501ab3ed08871eb6b2b173
     }
 }
