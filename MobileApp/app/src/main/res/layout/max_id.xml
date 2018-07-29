@@ -32,7 +32,7 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="275dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="15dp">
@@ -98,6 +98,11 @@
             android:textSize="20dp" />
 
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/sync"/>
 
 
 </LinearLayout>

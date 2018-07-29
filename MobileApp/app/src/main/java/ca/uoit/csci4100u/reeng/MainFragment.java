@@ -47,8 +47,8 @@ public class MainFragment extends Fragment {
         ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewpager);
         mAdapter = new Adapter(getChildFragmentManager());
         mAdapter.addFragment(new EventFragment(), "Events");
-        mAdapter.addFragment(new EventFragment(), "Goals");
-        mAdapter.addFragment(new EventFragment(), "Sales");
+        mAdapter.addFragment(new GoalsFragment(), "Goals");
+        mAdapter.addFragment(new SalesFragment(), "Sales");
         viewPager.setAdapter(mAdapter);        // Set Tabs inside Toolbar
         TabLayout tabs = (TabLayout) view.findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
