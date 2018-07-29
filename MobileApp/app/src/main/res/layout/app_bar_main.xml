@@ -6,7 +6,15 @@
     android:layout_height="match_parent"
     tools:context="ca.uoit.csci4100u.reeng.MainActivity">
 
-    <include layout="@layout/content_main" />
+    <!--<include layout="@layout/content_main" />-->
+    <!--android:layout_below="@id/app_bar"-->
+
+    <FrameLayout
+        android:id="@+id/fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+    </FrameLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import static ca.uoit.csci4100u.reeng.MainActivity.mNavigationView;
+//import static ca.uoit.csci4100u.reeng.MainActivity.mNavigationView;
 
 public class MainFragment extends Fragment {
     protected static final String TAG = MainFragment.class.getSimpleName();
@@ -40,8 +40,8 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_main, container, false);
-        selectedItem = mNavigationView.getMenu().getItem(0);
-        selectedItem.setChecked(true);
+//        selectedItem = mNavigationView.getMenu().getItem(0);
+//        selectedItem.setChecked(true);
         getActivity().setTitle(R.string.events);
 
         ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewpager);
