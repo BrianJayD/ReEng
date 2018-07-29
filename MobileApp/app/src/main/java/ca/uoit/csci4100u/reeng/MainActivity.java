@@ -1,6 +1,10 @@
 package ca.uoit.csci4100u.reeng;
 
+<<<<<<< HEAD
 import android.net.Uri;
+=======
+import android.content.Intent;
+>>>>>>> 623a149bf00b2668ed501ab3ed08871eb6b2b173
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -28,25 +32,25 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_login);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        //Button Floating
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        /*DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
-        toggle.syncState();
+        toggle.syncState();*/
 
+<<<<<<< HEAD
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
         mNavigationView.setNavigationItemSelectedListener(this);
 		fm = getSupportFragmentManager();
@@ -69,6 +73,10 @@ public class MainActivity extends AppCompatActivity
         fragmentTransaction.replace(R.id.fragment_layout, fragment, fragment.getTag());
         fragmentTransaction.addToBackStack(fragment.getTag());
         fragmentTransaction.commit();
+=======
+        /*NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);*/
+>>>>>>> 623a149bf00b2668ed501ab3ed08871eb6b2b173
     }
 
     @Override
@@ -122,8 +130,15 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+<<<<<<< HEAD
     @Override
     public void onFragmentInteraction(Uri uri) {
 
+=======
+    public void signIn(View view) {
+        Intent intent = new Intent(MainActivity.this, FrontPageActivity.class);
+        startActivity(intent);
+        finish();
+>>>>>>> 623a149bf00b2668ed501ab3ed08871eb6b2b173
     }
 }
